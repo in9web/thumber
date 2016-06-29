@@ -1,1 +1,1 @@
-PILcompat
+pil-compat==1.0.0
