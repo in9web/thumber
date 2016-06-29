@@ -5,7 +5,6 @@ import sys
 import SimpleHTTPServer
 import SocketServer
 
-import base64
 import re
 
 import PIL
