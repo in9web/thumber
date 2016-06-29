@@ -39,7 +39,6 @@ def image_generate(image_size = (50, 50), image_color= (210, 210, 210)):
 	s.seek(0)
 	r = s.read()
 
-	print r
 	return r
 
 class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
