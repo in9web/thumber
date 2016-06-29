@@ -1,1 +1,1 @@
-web: server.py 80
+web: server.py
