@@ -65,7 +65,13 @@ class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 			self.end_headers()
 			self.wfile.write(response)
 		else:
-			self.send_response(500, "")
+			f = file("./index.html")
+			c = f.read()
+			f.close()
+
+			self.send_response(200)
+			self.end_headers()
+			self.wfile.write(c)
 
 
 PORT =  int(os.environ.get('PORT')) if os.environ.has_key('PORT') else 8000
