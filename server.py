@@ -67,7 +67,8 @@ class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 		else:
 			self.send_response(500, "")
 
-PORT =  os.environ.get('PORT') if len(sys.argv) == 2 else 80
+
+PORT =  int(os.environ.get('PORT')) if os.environ.has_key('PORT') else 8000
 
 Handler = MyHandler
 httpd = SocketServer.TCPServer(("", PORT), Handler)
